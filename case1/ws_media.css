@@ -36,6 +36,8 @@ video{
 
 /* Track Styles */
 ::cue{
-    
+    font-size: 1.3em sans-serif;
+    color: rgb(221, 128, 160);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
