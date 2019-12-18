@@ -70,20 +70,48 @@ div#bat{
    height: 50px;
    top: 100px;
    left: -50px;
-   background-image: url(paa_bat.png);
-   background-position: left center;
-   background-repeat: cover no-repeat;
+   background: url(paa_bat.png) left center / cover no-repeat;
 }
 /*step 13*/
 div#butterfly{
    width: 35px;
    height: 35px;
-   top: 100px;
+   top: 60px;
    left: -50px;
-   background-image: url(paa_bat.png);
-   background-position: left center;
-   background-repeat: cover no-repeat;
+   background: url(paa_bfly.png) left center / cover no-repeat;
+}
+
+div#fox{
+   width: 280px;
+   height: 260px;
+   bottom: 10px;
+   right: 10px;
+   background: url(paa_fox.png) left center / cover no-repeat;
 }
 
 /* Animation Styles */
+
+@keyframes playSprite{
+   100% {background-position: right center;}
+}
+@keyframes flyRight{
+   25% {top: 150px;}
+   50% {top: 55px;}
+   65% {top: 120px;}
+   90% {top: 50px;}
+   100% {top: 80px; left: 100%;}
+}
+div#fox{
+   animation: playSprite 1.2s infinite steps(27);
+   animation-delay: 4s;
+}
+div#bat{
+   animation: playSprite 2s infinite steps(39), flyRight 8s linear infinite;
+}
+div#butterfly{
+   animation: playSprite 1s infinite steps(33), flyRight 6s cubic-bezier(0, 1, 0.73, 0) infinite;
+   animation-delay: 3s;
+}
+
+
 
